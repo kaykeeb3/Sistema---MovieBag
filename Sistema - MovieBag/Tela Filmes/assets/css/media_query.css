@@ -1,0 +1,242 @@
+
+@media screen and (max-width: 1200px) {
+
+  :root {
+
+    --px: 80px;
+
+  }
+
+
+/*Kayke Barbosa loiola*/
+
+  header {
+    position: fixed;
+    top:  0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 50;
+  }
+
+  header.active { top: 250px; }
+
+
+
+  .navbar-menu-btn {
+    display: block;
+    position: absolute;
+    top:  50%;
+    left: var(--px);
+    transform: translateY(-50%);
+  }
+
+  .navbar-brand { margin-left: 50px; }
+
+  .navbar-menu-btn span {
+    display: block;
+    background: var(--off-white);
+    width: 25px;
+    height: 2px;
+    margin: 8px;
+  }
+
+  .navbar-menu-btn .two   { width: 20px; }
+  .navbar-menu-btn .three { width: 15px; }
+
+  .navbar-menu-btn.active span { background: var(--light-azure); }
+
+  .navbar-menu-btn.active .one { transform: rotate(45deg) translateY(14px); }
+
+  .navbar-menu-btn.active .two { width: 0; }
+
+  .navbar-menu-btn.active .three {
+    width: 25px;
+    transform: rotate(-45deg) translateY(-14px); 
+  }
+
+  nav {
+    position: fixed;
+    top: -250px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  nav.active { top: 0; }
+
+  .navbar-nav {
+    height: 250px;
+    flex-direction: column;
+    justify-content: center;
+    align-items:     flex-start;
+    padding-left: var(--px);
+    border-bottom: 1px solid var(--oxford-blue);
+  }
+
+  .navbar-nav li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .navbar-form {
+    position: absolute;
+    top:   100%;
+    left:  var(--px);
+    right: var(--px);
+    height: 100%;
+    background: var(--rich-black-fogra-29);
+    margin-right: 0;
+    display:         flex;
+    justify-content: space-between;
+    align-items:     center;
+    z-index: 100;
+  }
+
+  .navbar-form.active { top: 0; }
+
+  .navbar-form-search { margin-right: 40px; }
+
+  .navbar-form-btn { right: 80px; }
+
+  .navbar-form-close {
+    display: block;
+    padding-top: 4px;
+    opacity: 0.8;
+  }
+
+  .navbar-form-close:hover { opacity: 1; }
+
+  .navbar-form-close ion-icon {
+    font-size: 20px;
+    color: var(--light-azure);
+  }
+
+  .navbar-search-btn {
+    display: block;
+    margin-right: 100px;
+    padding-top: 5px;
+  }
+
+
+
+
+  .banner { margin-top: 100px; }
+
+  .banner-card .card-title { font-size: 2.5em; }
+
+
+
+
+
+  .category-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+
+
+  
+
+  .footer-content { flex-direction: column; }
+
+  .footer-brand {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .footer-links { grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); }
+  
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+  :root {
+
+
+
+    --px: 60px;
+
+  }
+
+
+  .banner-card .card-content {
+    bottom: 40px;
+    left: 60px;
+    right: 60px;
+  }
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  :root {
+
+
+
+    --px: 40px; 
+
+  }
+
+
+
+  .banner { display: none; }
+
+
+
+
+  
+  .movies { margin-top: 120px; }
+
+ 
+  .filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-bar select { margin-bottom: 20px; }
+
+  .filter-radios { width: 100%; }
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 575px) {
+  :root {
+
+
+
+    --px: 20px; 
+
+    --section-heading: 32px;
+    --fs-lg:           20px;
+
+  }
+
+  .navbar-search-btn { margin-right: 20px; }
+
+  .navbar-form-search { margin-right: 20px; }
+
+  .navbar-form-btn { right: 55px; }
+
+  
+
+
+  .footer-copyright { flex-direction: column-reverse; }
+
+  .wrapper { margin-bottom: 20px; }
+}
